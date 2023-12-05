@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,800;1,900&display=swap');
+@font-face {
+    font-family: 'Krub';
+    src: url(font/fuente/Krub-BoldItalic.ttf);
+}
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Krub';
+}
+
+body{
+    min-height: 100px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 100px;
+    z-index: 1000;
+    transition: 0.3s;
+    background:  rgb(16, 25, 34);
+    
+    
+}
+header .logo{
+    font-weight: 700;
+    color:rgb(197, 223, 223);
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+
+}
+
+header ul{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    margin: 0 15px;
+    color:rgb(241, 241, 241);
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header.sticky{
+    /*Cambia el color de la barra menu*/
+    background: #32455b;
+    padding: 5px 100px;
+}
+
+header.sticky ul li a{
+    /*Color de letra*/
+    color: #000000;
+    border-bottom: 3px solid rgba(0,0,0,.1);
+    
+}
+
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/ds.jpg);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-size: cover;
+
+}
+
+.banner h2{
+    color: #f9f7f7;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+
+}
+.banner h2 span{
+    color:dodgerblue;
+}
+.sec{
+    background: #ffff;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.sec .content{
+    text-align:  center;
+    width: 100%;
+}
+
+
+.mxw800p{
+    max-width: 600px;
+    margin: 0 auto;
+  
+}
+
+p {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+
+}
+
+
+/* SLIDER*/
+
+.slider{
+    position: relative;
+}
+.slider-items{
+    
+    overflow: hidden;
+}
+@keyframes reverse{
+    0% { transform: scale(1.2); opacity: 0;}
+    100% { transform: scale(1); opacity: 1;}
+}
+
+.slider-items .item{
+    display:none ;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: reverse 1s;
+}
+
+.slider-items .item img{
+    max-width: 100%;
+}
+
+.slider-items .item.active{
+    display: block;
+}
+.slider-items .item .descripcion{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(255,255,255,.4);
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.slider .right-slide,
+.slider .left-slide {
+    width: 40px;
+    height: 40px;
+    background: #32455b;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #ffff;
+    font-size: 23px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider .right-slide{
+   right:  10px;
+}
+
+.slider .left-slide{
+     left: 10px;
+}
+
+/*FIN SLIDER Alfredo AAA*/ 
+
+.btn{
+    display:inline-block;
+    background: #1f2c3b;
+    color: #fff;
+    padding:10px 30px;
+    text-decoration: none;
+}
+
+.advan{
+    background: #32455b;
+    min-height: 90vh;
+    
+}
+.advanBox {
+    
+    display:grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit,minmax(100px, 1fr));
+    max-width: 100%;
+    padding-top: 100px ;
+    
+
+}
+
+.advanBox .box{
+    width: 150px;
+    height: 150px;
+    background: #778ba1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-top: -200px;
+    margin: 0 auto;
+    
+}
+.advanBox .box:hover{
+    background: #f9f7f7;
+    border: 8px solid #061e3f;
+   
+}
+
+.services{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    max-width:100%;
+    margin-top: 10px;
+}
+
+.services .box{
+    width: 260px;
+    margin: 0 auto;
+    box-shadow: 0px 10px 25px rgba(0,0,0,.8);
+    padding: 20px;
+}
+
+
+.services .box .iconbox img{
+    max-width: 100px;
+    margin-bottom: 10px;
+    
+}
+
+.services .box  .content h3{
+    font-weight: 400;
+    color:rgb(255, 69, 1);
+}
+
+.imagen{
+    max-width: 100%;
+    float:left;
+    display:block; 
+    padding: 8%;
+}
+
+.casosBx{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 30px;
+}
+.persona{
+    position: relative;
+    width: 250px;
+    min-height: 300px;
+
+}
+
+.casosBx .persona .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.casosBx .persona .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.casosBx .persona .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    opacity: 0;
+    transition: .5s;
+}
+.casosBx .persona .details:hover{
+    opacity: 1;
+}
+.casosBx .persona .details h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.casosBx .persona .details h2 span{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.workBx{
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    max-width: 100%;
+    margin-top: 40px;
+
+}
+
+.workBx .brand{
+    position: relative;
+    background: #32455b ;
+    height: 300px;
+    width: 250px;
+    margin: 10 auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 10px;
+    
+}
+.workBx .brand:hover{
+    background: #132436;
+}
+.workBx .brand a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.9);
+    text-transform:none;
+    height:200px;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+ .brand .imgWb img{
+    position:absolute;
+    border-radius: 5px;
+    top: 140;
+    left: 30;
+    max-width: 100%;
+    width: 180px;
+
+}
+.secwork .content .mxw800p h3{
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    display: flex;
+    
+}
+.secwork .content .mxw800p p{
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    display: flex;
+   
+}
+
+
+
+
+
+.contact{
+    background: #32455b;
+}
+.contact h3, .contact p{
+    color: #fff;
+}
+.contactForm{
+    position:relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contactForm form{
+    width: 100%;
+}
+
+.contactForm .row100{
+    display: flex;
+    width: 100%;
+}
+
+.contactForm .row100 .inputBx50{
+    width: 50%;
+    margin: 0 20px;
+}
+
+.contactForm .row100 .inputBx100{
+    width: 100%;
+    margin: 0 20px;
+}
+
+.contactForm .row100 input,
+.contactForm .row100 textarea{
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent; /*Quitar el fondo del campo*/ 
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    font-size: 17px;
+    margin: 20px 0;
+    resize: none;
+}
+
+.contactForm .row100 textarea{
+    height: 100px;
+}
+
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+.contactForm .row100 input[type="submit"]{
+    background: #fff;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer; /*cambio de cursor */ 
+    font-weight: 500;
+}
+/*Practica 7 */
+#text{
+    display: block;
+    color: #32455b;
+    font-weight: 500;
+    padding: 1px;
+    text-align: left;
+    margin-top: -10px;
+
+}
+
+.sci{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.sci ul{
+    display: flex;
+}
+.sci ul li{
+    list-style: none;
+}
+
+.sci ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.sci ul li a img{
+    filter:grayscale(); /*Cambiar el color del icono */ 
+    max-width: 50px; /*Modificamos el tamaño del icono*/ 
+}
+.sci ul li a:hover img{
+    opacity: 0.5;
+} 
+
+#button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0,0,0,.1);
+}
+
+#button-up{
+    width: 60px;
+    height: 60px;
+    background: #101a33;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 300ms;
+    box-shadow: 0px 20px 25px rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 50px;
+    
+   
+
+}
+
+/*Para pantallas pequeñas */ 
+
+@media (max-width:950px){
+    
+    header ul.sub1
+    {
+        position: absolute;
+        visibility:hidden;
+        flex-direction: column;
+        top: 50px;
+        left: 0%;
+        background: #507095;
+        width: 100%;
+        height: 100vh;
+    }
+
+    header.active ul{
+        visibility: visible;
+    }
+
+    header.active ul li a{
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 25px;
+    }
+
+    .btnmenu{
+        
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+
+    
+ /* Pseudo elementos*/
+
+    .btnmenu::before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background:#0a0a0a ;
+        box-shadow: 1 10px 0 #ab080800;
+    }
+    .btnmenu::after{
+        content: '';
+        position:absolute;
+        bottom: 9px;
+        width: 100%;
+        height: 2px;
+        background: #0c0c0c;
+    
+    }
+    .banner{
+        background-position: center;
+    }
+    .banner h2{
+        font-size: 60px;
+        padding : 0 auto ;
+    }
+    .services .box{
+        width: 100%;
+    }
+    .casosBx .persona{
+        margin: 0 auto;
+    }
+
+}
+
+
+/* */ 
